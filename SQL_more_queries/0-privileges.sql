@@ -1,5 +1,5 @@
 -- lists all privileges of the MySQL users user_0d_1 and user_0d_2;
 -- privileges for user 1
-GRANT SELECT, INSERT, UPDATE, DELETE ON *.* TO 'user_0d_1'@'localhost';
+SHOW GRANTS ON *.* TO 'user_0d_1'@'localhost';
 -- privileges for user 2
-GRANT SELECT, INSERT, UPDATE, DELETE ON *.* TO 'user_0d_2'@'localhost';
+SHOW GRANTS ON *.* TO 'user_0d_2'@'localhost';
