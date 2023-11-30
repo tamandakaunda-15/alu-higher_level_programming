@@ -3,4 +3,5 @@
 SELECT <TV Show genre> - <Number of shows linked to this genre>
 NAME FIRST COLUMMN genre
 NAME SECOND COLUMN number_of_shows
-ORDER BY DESC 
+GROUP BY genre
+ORDER BY number_of_shows DESC;
