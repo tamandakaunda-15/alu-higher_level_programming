@@ -8,3 +8,5 @@ CREATE TABLE IF NOT EXISTS states (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(256) NOT NULL
 );
+-- creating a table called cities
+CREATE TABLE IF NOT EXISTS cities (id INT AUTO_INCREMENT PRIMARY KEY, state_id INT, name VARCHAR(256) NOT NULL );
