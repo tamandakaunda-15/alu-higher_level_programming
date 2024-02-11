@@ -1,6 +1,20 @@
 #!/usr/bin/node
+const { argv } = require('process');
 const request = require('request');
-let url = 'http://swapi.co/api/films/' + process.argv[2];
-request(url, function (error, response, body) {
-  console.log(error || JSON.parse(body).title);
-});
+
+if (argv[2]) {
+  const uri = `https://swapi-api.alx-tools.com/api/films/${argv[2]}`;
+  const options = {
+    method: 'GET',
+    uri: `https://swapi-api.alx-tools.com/api/films/${argv[2]}`
+  };
+  request(uri, options, (err, response, body) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    console.log(JSON.parse(body).title);
+  });
+} else {
+  console.log('An error occured missing url command line arg.');
+}
